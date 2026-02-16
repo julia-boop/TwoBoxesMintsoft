@@ -63,8 +63,19 @@ class MintsoftOrderClient:
     def create_return(self, order_id:int, warehouse_id:int, client_id:int):
         return []
 
-    def create_external_return(self, client_id:int, warehouse_id:int):
-        return []
+    def create_external_return(self, data:Dict[str, Any]):
+        url = f"{self.BASE_URL}/api/Return/CreateExternalReturn"
+
+        r = requests.post(
+            url, 
+            headers=self.headers(),
+            json=data
+        )
+
+        r.raise_for_status()
+        response = r.json()
+        print(response)
+        return response
     
     def add_return_items(self, return_id:int, items:List[Dict[str, Any]]):
         #agregar items
@@ -142,5 +153,17 @@ class MintsoftOrderClient:
             json.dump(data, f, ensure_ascii=False, indent=4)
         return data
     
-client = MintsoftOrderClient()
-client._authenticate
+    def get_return_reasons(self):
+        url = f"{self.BASE_URL}/api/Return/Reasons"
+
+        r = requests.get(
+            url,
+            headers=self.headers(),
+            timeout=30,
+        )
+
+        r.raise_for_status()
+        data = r.json()
+        print(data)
+        return data    
+    

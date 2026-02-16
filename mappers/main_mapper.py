@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 import json
 
-from mappers.client_mapper import map_client, map_warehouse
+from mappers.mintsoft_mapper import map_client, map_warehouse
 
 load_dotenv()
 
@@ -13,25 +13,32 @@ def map_return(data):
     merchant_name = data["merchant_integration"]["merchant"]["name"]
     client_id = map_client(merchant_name)
     warehouse_id = map_warehouse(merchant_name)
+    # m_items = []
+    # for item in data["line_items"]:
+    #     m_items.append({
+    #         "SKU": item["sku"],
+    #         "Quantity": item["quantity"],
+    #         "ReturnReasonId": 1,
+    #         "Action": "DoNothing",
+    #         "Comments": item["graded_attributes"][0]["merchant_grading_attribute"]["grading_attribute"]["title"]
+    #     })
 
     m_data = {
         "ClientId": client_id,
         "WarehouseId": warehouse_id,
-        "OrderId": data["line_items"][0]["storefront_order_number"],
-        "ReturnReasonId": 1,
-        "ReturnItems": [
-            {
-                "SKU":"",
-                "Quantity":1,
-                "ReturnReasonId":1,
-                "Action":"",
-                "Comment":""
-            }
-        ],
+        "Reference": data["line_items"][0]["tracking_number"],
+        "ReturnItems": [{
+            "ProductID": 72, 
+            "SKU": "TEST1",
+            "Quantity": 1,
+            "ReturnReasonId": 1,
+            "Action": "DoNothing",
+            "Comments": "No Defects"
+        }], 
         "ExtraFields": [
             {
-                "Name":"",
-                "Value":""
+                "Name":"type",
+                "Value":"Returns_External"
             }
         ]
     }

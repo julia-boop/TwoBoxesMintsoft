@@ -46,3 +46,128 @@
 2026-02-11 17:22:24,375 | INFO | mintsoft_service | Fetched 21 orders from Mintsoft
 2026-02-11 17:22:24,375 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
 2026-02-11 17:22:24,375 | INFO | mintsoft_service | Found matching order in Mintsoft for RMA order name: TEST CLIENT-1917-Copy
+2026-02-16 17:35:31,415 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-16 17:35:33,710 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-16 17:35:34,457 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-16 17:35:34,457 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-16 17:35:34,949 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-16 17:35:34,949 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-16 17:35:36,245 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-16 17:35:36,246 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft
+2026-02-16 17:35:36,246 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-16 17:35:36,246 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-16 17:36:08,747 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-16 17:36:09,260 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-16 17:36:10,053 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-16 17:36:10,053 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-16 17:36:10,914 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-16 17:36:10,914 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-16 17:36:12,108 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-16 17:36:12,108 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft
+2026-02-16 17:36:12,108 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-16 17:36:12,108 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-16 17:42:32,113 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-16 17:42:32,114 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-16 17:42:33,383 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-16 17:42:33,383 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-16 17:42:33,818 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-16 17:42:33,818 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-16 17:42:34,307 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-16 17:42:34,308 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-16 17:42:34,308 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-16 17:42:34,308 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-16 17:42:34,308 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-16 17:42:34,736 | ERROR | mintsoft_service | Error creating return: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 71, in create_return
+    response = self.client.create_external_return(data=m_return)
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/clients/mintsoftClient.py", line 75, in create_external_return
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+2026-02-16 17:43:19,844 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-16 17:43:19,845 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-16 17:43:20,465 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-16 17:43:20,465 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-16 17:43:20,971 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-16 17:43:20,971 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-16 17:43:21,478 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-16 17:43:21,478 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-16 17:43:21,478 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-16 17:43:21,478 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-16 17:43:21,478 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-16 17:43:21,969 | ERROR | mintsoft_service | Error creating return: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 72, in create_return
+    response = self.client.create_external_return(data=m_return)
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/clients/mintsoftClient.py", line 75, in create_external_return
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+2026-02-16 17:44:32,762 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-16 17:44:32,763 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-16 17:44:33,150 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-16 17:44:33,151 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-16 17:44:33,749 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-16 17:44:33,750 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-16 17:44:34,238 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-16 17:44:34,238 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-16 17:44:34,238 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-16 17:44:34,238 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-16 17:44:34,238 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-16 17:44:34,647 | ERROR | mintsoft_service | Error creating return: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 72, in create_return
+    response = self.client.create_external_return(data=m_return)
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/clients/mintsoftClient.py", line 75, in create_external_return
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+2026-02-16 17:46:21,774 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-16 17:46:21,775 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-16 17:46:22,187 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-16 17:46:22,187 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-16 17:46:22,751 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-16 17:46:22,752 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-16 17:46:23,179 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-16 17:46:23,179 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-16 17:46:23,179 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-16 17:46:23,179 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-16 17:46:23,179 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-16 17:46:23,549 | ERROR | mintsoft_service | Error creating return: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 72, in create_return
+    response = self.client.create_external_return(data=m_return)
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/clients/mintsoftClient.py", line 75, in create_external_return
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+2026-02-16 17:54:47,911 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-16 17:54:47,915 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-16 17:54:48,408 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-16 17:54:48,409 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-16 17:54:48,915 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-16 17:54:48,915 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-16 17:54:49,768 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-16 17:54:49,768 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-16 17:54:49,768 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-16 17:54:49,768 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-16 17:54:49,768 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-16 17:54:50,207 | ERROR | mintsoft_service | Error creating return: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 72, in create_return
+    response = self.client.create_external_return(data=m_return)
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/clients/mintsoftClient.py", line 75, in create_external_return
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
