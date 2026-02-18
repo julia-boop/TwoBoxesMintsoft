@@ -27,19 +27,6 @@ def map_return(data):
         "ClientId": client_id,
         "WarehouseId": warehouse_id,
         "Reference": data["line_items"][0]["tracking_number"],
-        "ReturnItems": [{
-            "ProductID": 72, 
-            "SKU": "TEST1",
-            "Quantity": 1,
-            "ReturnReasonId": 1,
-            "Action": "DoNothing",
-            "Comments": "No Defects"
-        }], 
-        "ExtraFields": [
-            {
-                "Name":"type",
-                "Value":"Returns_External"
-            }
-        ]
+
     }
     return m_data

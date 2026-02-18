@@ -171,3 +171,87 @@ Traceback (most recent call last):
   File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
     raise HTTPError(http_error_msg, response=self)
 requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.mintsoft.co.uk/api/Return/CreateExternalReturn
+2026-02-17 11:06:20,758 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-17 11:06:20,759 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-17 11:06:23,592 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-17 11:06:23,592 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-17 11:06:25,922 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-17 11:06:25,922 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-17 11:06:27,908 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-17 11:06:27,908 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-17 11:06:27,908 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-17 11:06:27,908 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-17 11:06:27,908 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-17 11:06:30,654 | INFO | mintsoft_service | External return created. Response: {'ID': 35, 'Success': True, 'SensitiveData': None, 'Message': 'External Return Created ID:35', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-17 11:17:02,038 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-17 11:17:02,040 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-17 11:17:04,460 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-17 11:17:04,460 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-17 11:17:06,647 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-17 11:17:06,647 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-17 11:17:09,248 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-17 11:17:09,249 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-17 11:17:09,249 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-17 11:17:09,250 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-17 11:17:09,250 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-17 11:17:11,170 | INFO | mintsoft_service | External return created. Response: {'ID': 36, 'Success': True, 'SensitiveData': None, 'Message': 'External Return Created ID:36', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-17 11:43:27,588 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-17 11:43:27,589 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-17 11:43:28,914 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-17 11:43:28,914 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-17 11:43:29,430 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-17 11:43:29,430 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-17 11:43:29,900 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-17 11:43:29,901 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-17 11:43:29,901 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-17 11:43:29,901 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-17 11:43:29,901 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-17 11:43:31,118 | INFO | mintsoft_service | External return created. Response: {'ID': 37, 'Success': True, 'SensitiveData': None, 'Message': 'External Return Created ID:37', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-17 11:44:24,405 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-17 11:44:24,406 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-17 11:44:25,037 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-17 11:44:25,037 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-17 11:44:25,809 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-17 11:44:25,809 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-17 11:44:26,275 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-17 11:44:26,275 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-17 11:44:26,275 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-17 11:44:26,275 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-17 11:44:26,275 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-17 11:44:26,747 | INFO | mintsoft_service | External return created. Response: {'ID': 38, 'Success': True, 'SensitiveData': None, 'Message': 'External Return Created ID:38', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-17 11:47:40,965 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-17 11:47:40,968 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-17 11:47:41,431 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-17 11:47:41,432 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-17 11:47:41,867 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-17 11:47:41,867 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-17 11:47:42,307 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-17 11:47:42,307 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-17 11:47:42,308 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-17 11:47:42,308 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-17 11:47:42,308 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-17 11:47:43,159 | INFO | mintsoft_service | External return created. Response: {'ID': 39, 'Success': True, 'SensitiveData': None, 'Message': 'External Return Created ID:39', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-17 12:07:03,279 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-17 12:07:03,281 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-17 12:07:03,757 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-17 12:07:03,757 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-17 12:07:05,424 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-17 12:07:05,424 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-17 12:07:05,970 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-17 12:07:05,970 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-17 12:07:05,970 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-17 12:07:05,970 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-17 12:07:05,971 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-17 12:07:06,664 | INFO | mintsoft_service | External return created. Response: {'ID': 40, 'Success': True, 'SensitiveData': None, 'Message': 'External Return Created ID:40', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-17 12:08:17,447 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-17 12:08:17,449 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-17 12:08:18,030 | INFO | mintsoft_service | Fetched 13 orders with status ID 4 from Mintsoft
+2026-02-17 12:08:18,030 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-17 12:08:18,532 | INFO | mintsoft_service | Fetched 13 orders with status ID 5 from Mintsoft
+2026-02-17 12:08:18,532 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-17 12:08:21,125 | INFO | mintsoft_service | Fetched 13 orders with status ID 6 from Mintsoft
+2026-02-17 12:08:21,126 | INFO | mintsoft_service | Fetched 39 orders from Mintsoft (total)
+2026-02-17 12:08:21,126 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-17 12:08:21,126 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-17 12:08:21,126 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-17 12:08:21,569 | INFO | mintsoft_service | External return created. Response: {'ID': 41, 'Success': True, 'SensitiveData': None, 'Message': 'External Return Created ID:41', 'WarningMessage': None, 'AllocatedFromReplen': False}
