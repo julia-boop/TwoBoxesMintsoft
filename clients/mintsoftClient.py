@@ -78,16 +78,6 @@ class MintsoftOrderClient:
         return response
     
     def add_return_item(self, return_id: int, item_data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Add a single item to a return.
-        
-        Args:
-            return_id: The ID of the return
-            item_data: Dictionary containing SKU, Quantity, ReturnReasonId, Action, and optional Comments
-        
-        Returns:
-            Dict containing the API response
-        """
         url = f"{self.BASE_URL}/api/Return/{return_id}/AddItem"
         
         r = requests.post(
@@ -100,16 +90,6 @@ class MintsoftOrderClient:
         return r.json()
     
     def allocate_return_item_location(self, return_id: int, allocation_data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Allocate a location for an item in a return.
-        
-        Args:
-            return_id: The ID of the return
-            allocation_data: Dictionary containing SKU, LocationId, and Quantity
-        
-        Returns:
-            Dict containing the API response
-        """
         url = f"{self.BASE_URL}/api/Return/{return_id}/Allocate"
         
         r = requests.post(
@@ -122,15 +102,6 @@ class MintsoftOrderClient:
         return r.json()
     
     def confirm_return(self, return_id: int) -> Dict[str, Any]:
-        """
-        Confirm a return.
-        
-        Args:
-            return_id: The ID of the return to confirm
-        
-        Returns:
-            Dict containing the API response
-        """
         url = f"{self.BASE_URL}/api/Return/{return_id}/Confirm"
         
         r = requests.post(
