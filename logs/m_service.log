@@ -255,3 +255,161 @@ requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://ap
 2026-02-17 12:08:21,126 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
 2026-02-17 12:08:21,126 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
 2026-02-17 12:08:21,569 | INFO | mintsoft_service | External return created. Response: {'ID': 41, 'Success': True, 'SensitiveData': None, 'Message': 'External Return Created ID:41', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-18 18:35:52,772 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-18 18:35:52,773 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-18 18:35:56,079 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-18 18:35:56,079 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-18 18:35:56,580 | INFO | mintsoft_service | Fetched 12 orders with status ID 4 from Mintsoft
+2026-02-18 18:35:56,581 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-18 18:35:57,037 | INFO | mintsoft_service | Fetched 12 orders with status ID 5 from Mintsoft
+2026-02-18 18:35:57,038 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-18 18:35:57,532 | INFO | mintsoft_service | Fetched 12 orders with status ID 6 from Mintsoft
+2026-02-18 18:35:57,533 | INFO | mintsoft_service | Fetched 36 orders from Mintsoft (total)
+2026-02-18 18:35:57,533 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-18 18:35:57,533 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-18 18:35:57,533 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-18 18:35:58,045 | INFO | mintsoft_service | External return created with ID: 42
+2026-02-18 18:37:13,504 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-18 18:37:13,506 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-18 18:37:13,968 | INFO | mintsoft_service | Fetched 12 orders with status ID 4 from Mintsoft
+2026-02-18 18:37:13,969 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-18 18:37:14,442 | INFO | mintsoft_service | Fetched 12 orders with status ID 5 from Mintsoft
+2026-02-18 18:37:14,442 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-18 18:37:14,848 | INFO | mintsoft_service | Fetched 12 orders with status ID 6 from Mintsoft
+2026-02-18 18:37:14,849 | INFO | mintsoft_service | Fetched 36 orders from Mintsoft (total)
+2026-02-18 18:37:14,849 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-18 18:37:14,849 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-18 18:37:14,849 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-18 18:37:15,286 | INFO | mintsoft_service | External return created with ID: 43
+2026-02-18 18:37:15,286 | INFO | mintsoft_service | Starting to add items to return 43
+2026-02-18 18:37:15,286 | INFO | mintsoft_service | Adding item TEST1 to return 43
+2026-02-18 18:37:15,286 | ERROR | mintsoft_service | Error adding items to return 43: 'NoneType' object has no attribute 'split'
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 109, in add_return_items
+    "ReturnPhotos": item.get("graded_attributes", [{}])[0].get("photo_urls").split(",").strip()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
+2026-02-18 18:39:20,352 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-18 18:39:20,354 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-18 18:39:20,758 | INFO | mintsoft_service | Fetched 12 orders with status ID 4 from Mintsoft
+2026-02-18 18:39:20,758 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-18 18:39:21,177 | INFO | mintsoft_service | Fetched 12 orders with status ID 5 from Mintsoft
+2026-02-18 18:39:21,177 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-18 18:39:21,593 | INFO | mintsoft_service | Fetched 12 orders with status ID 6 from Mintsoft
+2026-02-18 18:39:21,593 | INFO | mintsoft_service | Fetched 36 orders from Mintsoft (total)
+2026-02-18 18:39:21,593 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-18 18:39:21,593 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-18 18:39:21,593 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-18 18:39:22,048 | INFO | mintsoft_service | External return created with ID: 44
+2026-02-18 18:39:22,048 | INFO | mintsoft_service | Starting to add items to return 44
+2026-02-18 18:39:22,048 | INFO | mintsoft_service | Adding item TEST1 to return 44
+2026-02-18 18:39:22,048 | ERROR | mintsoft_service | Error adding items to return 44: 'list' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 103, in add_return_items
+    item_photos = item.get("graded_attributes", [{}])[0].get("photo_urls").split(",").strip()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'strip'
+2026-02-18 18:39:36,571 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-18 18:39:36,571 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-18 18:39:37,811 | INFO | mintsoft_service | Fetched 12 orders with status ID 4 from Mintsoft
+2026-02-18 18:39:37,812 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-18 18:39:38,213 | INFO | mintsoft_service | Fetched 12 orders with status ID 5 from Mintsoft
+2026-02-18 18:39:38,213 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-18 18:39:38,639 | INFO | mintsoft_service | Fetched 12 orders with status ID 6 from Mintsoft
+2026-02-18 18:39:38,639 | INFO | mintsoft_service | Fetched 36 orders from Mintsoft (total)
+2026-02-18 18:39:38,639 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-18 18:39:38,639 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-18 18:39:38,639 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-18 18:39:39,043 | INFO | mintsoft_service | External return created with ID: 45
+2026-02-18 18:39:39,044 | INFO | mintsoft_service | Starting to add items to return 45
+2026-02-18 18:39:39,044 | INFO | mintsoft_service | Adding item TEST1 to return 45
+2026-02-18 18:39:39,527 | INFO | mintsoft_service | Added item TEST1 to return 45: {'ID': 0, 'Success': False, 'SensitiveData': None, 'Message': 'An Error Occurred when attempting to: Adding Return Item Error: Object reference not set to an instance of an object.', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-18 18:39:39,527 | INFO | mintsoft_service | Found returns location ID: 5
+2026-02-18 18:39:39,880 | ERROR | mintsoft_service | Error adding items to return 45: 404 Client Error: Not Found for url: https://api.mintsoft.co.uk/api/Return/45/Allocate
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 130, in add_return_items
+    response = self.client.allocate_return_item_location(return_id, allocation_data)
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/clients/mintsoftClient.py", line 113, in allocate_return_item_location
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.mintsoft.co.uk/api/Return/45/Allocate
+2026-02-18 18:40:27,979 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-18 18:40:27,981 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-18 18:40:28,592 | INFO | mintsoft_service | Fetched 12 orders with status ID 4 from Mintsoft
+2026-02-18 18:40:28,592 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-18 18:40:28,996 | INFO | mintsoft_service | Fetched 12 orders with status ID 5 from Mintsoft
+2026-02-18 18:40:28,997 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-18 18:40:29,413 | INFO | mintsoft_service | Fetched 12 orders with status ID 6 from Mintsoft
+2026-02-18 18:40:29,413 | INFO | mintsoft_service | Fetched 36 orders from Mintsoft (total)
+2026-02-18 18:40:29,413 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-18 18:40:29,413 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-18 18:40:29,413 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-18 18:40:29,884 | INFO | mintsoft_service | External return created with ID: 46
+2026-02-18 18:40:29,885 | INFO | mintsoft_service | Starting to add items to return 46
+2026-02-18 18:40:29,885 | INFO | mintsoft_service | Adding item TEST1 to return 46
+2026-02-18 18:40:30,347 | INFO | mintsoft_service | Added item TEST1 to return 46: {'ID': 0, 'Success': False, 'SensitiveData': None, 'Message': 'An Error Occurred when attempting to: Adding Return Item Error: Object reference not set to an instance of an object.', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-18 18:40:30,347 | INFO | mintsoft_service | Found returns location ID: 5
+2026-02-18 18:40:30,694 | ERROR | mintsoft_service | Error adding items to return 46: 404 Client Error: Not Found for url: https://api.mintsoft.co.uk/api/Return/46/Allocate
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 131, in add_return_items
+    response = self.client.allocate_return_item_location(return_id, allocation_data)
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/clients/mintsoftClient.py", line 113, in allocate_return_item_location
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.mintsoft.co.uk/api/Return/46/Allocate
+2026-02-18 18:44:15,893 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-18 18:44:15,894 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-18 18:44:17,169 | INFO | mintsoft_service | Fetched 12 orders with status ID 4 from Mintsoft
+2026-02-18 18:44:17,169 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-18 18:44:17,567 | INFO | mintsoft_service | Fetched 12 orders with status ID 5 from Mintsoft
+2026-02-18 18:44:17,568 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-18 18:44:18,017 | INFO | mintsoft_service | Fetched 12 orders with status ID 6 from Mintsoft
+2026-02-18 18:44:18,017 | INFO | mintsoft_service | Fetched 36 orders from Mintsoft (total)
+2026-02-18 18:44:18,018 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-18 18:44:18,018 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-18 18:44:18,018 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-18 18:44:18,508 | INFO | mintsoft_service | External return created with ID: 47
+2026-02-18 18:44:18,508 | INFO | mintsoft_service | Starting to add items to return 47
+2026-02-18 18:44:18,508 | INFO | mintsoft_service | Adding item TEST1 to return 47
+2026-02-18 18:44:18,957 | INFO | mintsoft_service | Added item TEST1 to return 47: {'ID': 0, 'Success': False, 'SensitiveData': None, 'Message': 'An Error Occurred when attempting to: Adding Return Item Error: Object reference not set to an instance of an object.', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-18 18:44:18,958 | INFO | mintsoft_service | Found returns location ID: 5
+2026-02-18 18:44:19,299 | ERROR | mintsoft_service | Error adding items to return 47: 404 Client Error: Not Found for url: https://api.mintsoft.co.uk/api/Return/47/Allocate
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 131, in add_return_items
+    response = self.client.allocate_return_item_location(return_id, allocation_data)
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/clients/mintsoftClient.py", line 113, in allocate_return_item_location
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.mintsoft.co.uk/api/Return/47/Allocate
+2026-02-18 18:44:57,534 | INFO | mintsoft_service | Starting to fetch Mintsoft orders
+2026-02-18 18:44:57,536 | INFO | mintsoft_service | Fetching orders with status ID: 4
+2026-02-18 18:44:57,946 | INFO | mintsoft_service | Fetched 12 orders with status ID 4 from Mintsoft
+2026-02-18 18:44:57,946 | INFO | mintsoft_service | Fetching orders with status ID: 5
+2026-02-18 18:44:58,407 | INFO | mintsoft_service | Fetched 12 orders with status ID 5 from Mintsoft
+2026-02-18 18:44:58,408 | INFO | mintsoft_service | Fetching orders with status ID: 6
+2026-02-18 18:44:58,984 | INFO | mintsoft_service | Fetched 12 orders with status ID 6 from Mintsoft
+2026-02-18 18:44:58,984 | INFO | mintsoft_service | Fetched 36 orders from Mintsoft (total)
+2026-02-18 18:44:58,984 | INFO | mintsoft_service | Starting to match RMA order with Mintsoft orders
+2026-02-18 18:44:58,984 | WARNING | mintsoft_service | No matching order found in Mintsoft for RMA order name: None
+2026-02-18 18:44:58,984 | INFO | mintsoft_service | Order not found in Mintsoft. Creating EXTERNAL return.
+2026-02-18 18:44:59,419 | INFO | mintsoft_service | External return created with ID: 48
+2026-02-18 18:44:59,419 | INFO | mintsoft_service | Starting to add items to return 48
+2026-02-18 18:44:59,419 | INFO | mintsoft_service | Adding item TEST1 to return 48
+2026-02-18 18:44:59,862 | INFO | mintsoft_service | Added item TEST1 to return 48: {'ID': 0, 'Success': False, 'SensitiveData': None, 'Message': 'An Error Occurred when attempting to: Adding Return Item Error: Object reference not set to an instance of an object.', 'WarningMessage': None, 'AllocatedFromReplen': False}
+2026-02-18 18:44:59,863 | INFO | mintsoft_service | Found returns location ID: 5
+2026-02-18 18:45:00,211 | ERROR | mintsoft_service | Error adding items to return 48: 404 Client Error: Not Found for url: https://api.mintsoft.co.uk/api/Return/48/Allocate
+Traceback (most recent call last):
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/services/mintsoft_service.py", line 131, in add_return_items
+    response = self.client.allocate_return_item_location(return_id, allocation_data)
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/clients/mintsoftClient.py", line 113, in allocate_return_item_location
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/julia/Documents/Python/TwoBoxesMintsoft/.venv/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.mintsoft.co.uk/api/Return/48/Allocate

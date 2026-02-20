@@ -70,15 +70,13 @@ class MintsoftReturnService:
             if order_id is None:
                 self.logger.info("Order not found in Mintsoft. Creating EXTERNAL return.")
                 print(m_return)
-                response = self.client.create_external_return(data=m_return)
-                self.logger.info(f"External return created. Response: {response}")
-                return None
+                return_id = self.client.create_external_return(data=m_return)
+                self.logger.info(f"External return created with ID: {return_id}")
+                return return_id
 
             self.logger.info(f"Order found (ID={order_id}). Creating standard return.")
             return_id = self.client.create_return(
-                order_id=order_id,
-                warehouse_id=m_return["WarehouseId"],
-                client_id=m_return.get("ClientId"),  # safe if key exists
+                order_id=order_id
             )
             self.logger.info(f"Created return with ID: {return_id}")
             return return_id
@@ -87,7 +85,7 @@ class MintsoftReturnService:
             self.logger.error(f"Error creating return: {e}", exc_info=True)
             return None
 
-    def add_return_items(self, return_id: int, data: List[Dict]) -> Optional[Dict[str, Any]]:
+    def add_return_items(self, return_id: int, data: List[Dict]) -> Optional[Dict[str]]:
         self.logger.info(f"Starting to add items to return {return_id}")
         
         try:
@@ -102,14 +100,16 @@ class MintsoftReturnService:
             
             for item in line_items:
                 self.logger.info(f"Adding item {item.get('sku')} to return {return_id}")
+                item_photos = item.get("graded_attributes", [{}])[0].get("photo_urls").strip().split(",")
                 
                 item_data = {
                     "SKU": item.get("sku"),
                     "Quantity": item.get("quantity", 1),
                     "ReturnReasonId": map_return_reason(item), 
                     "Action": "NONE", 
-                    "ReturnPhotos": item.get("graded_attributes", [{}])[0].get("photo_urls").split(",").strip()
+                    "ReturnPhotos": item_photos if item_photos else []
                 }
+                print(item_data)
                 
                 graded_attributes = item.get("graded_attributes", [])
                 if graded_attributes and len(graded_attributes) > 0:
@@ -154,4 +154,4 @@ if __name__ == "__main__":
         tb_data = json.load(f)
 
     service = MintsoftReturnService()
-    service.create_return(tb_data)
+    service.add_return_items(service.create_return(tb_data), tb_data)

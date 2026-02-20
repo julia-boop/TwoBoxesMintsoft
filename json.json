@@ -1,0 +1,270 @@
+[
+  {
+    "SKU": "string",
+    "Name": "string",
+    "PalletSizes": "string",
+    "PackingInstructions": "string",
+    "Description": "string",
+    "CustomsDescription": "string",
+    "MIDCode": "string",
+    "CountryOfManufactureId": 0,
+    "CountryOfManufacture": {
+      "Name": "string",
+      "Code": "string",
+      "Code3": "string",
+      "ID": 0,
+      "LastUpdated": "2026-02-18T21:45:38.228Z",
+      "LastUpdatedByUser": "string"
+    },
+    "EAN": "string",
+    "UPC": "string",
+    "LowStockAlertLevel": 0,
+    "Weight": 100000,
+    "Height": 0,
+    "Width": 0,
+    "Depth": 0,
+    "Volume": 0,
+    "BackOrder": true,
+    "Bundle": true,
+    "DisCont": true,
+    "Price": 0,
+    "CostPrice": 0,
+    "VatExempt": true,
+    "AdditionalParcelsRequired": 1000,
+    "UnitsPerParcel": 1000000,
+    "HasBatchNumber": true,
+    "LogBatchInbound": true,
+    "LogBatchOutbound": true,
+    "HasSerialNumber": true,
+    "LogSerialInbound": true,
+    "LogSerialOutbound": true,
+    "HasExpiryDate": true,
+    "LogExpiryDateInbound": true,
+    "LogExpiryDateOutbound": true,
+    "BestBeforeDateWarningPeriodDays": 365,
+    "CommodityCode": {
+      "Code": "string",
+      "ID": 0,
+      "LastUpdated": "2026-02-18T21:45:38.228Z",
+      "LastUpdatedByUser": "string"
+    },
+    "HandlingTime": 365,
+    "ToteCapacity": 0,
+    "UnNumber": "stri",
+    "ImageURL": "string",
+    "ProductHazardousGoods": {
+      "ProductID": 0,
+      "HazardousUnNumber": "",
+      "HazardousUnNumberPrefixed": "",
+      "HazardousClass": "",
+      "HazardousProperShippingName": "",
+      "HazardousPackingCode": "",
+      "HazardousTunnelCode": "",
+      "HazardousLimitedQuantity": "",
+      "HazardousFullProperShippingCode": "",
+      "HazardousContentId": "",
+      "HazardousNotes": "",
+      "LitresPerUnit": 0,
+      "PackagingDescription": "",
+      "PackagingInstructions": "",
+      "FreezingPoint": 0,
+      "ID": 0,
+      "LastUpdated": "2026-02-18T21:45:38.228Z",
+      "LastUpdatedByUser": "string"
+    },
+    "ProductPurchasingSettings": {
+      "DefaultMinOrderQty": 0,
+      "DefaultMaxOrderQty": 0,
+      "DefaultOrderQty": 0,
+      "IncludeLinkedItems": true,
+      "ExcludeFromForecast": true,
+      "ForecastPeriodDays": 0,
+      "LeadTimeDays": 0,
+      "AvgDailyConsumption": 0
+    },
+    "ProductGrowthRates": [
+      {
+        "ProductId": 0,
+        "Product": "string",
+        "WeekNo": 0,
+        "SalesGrowth": 0,
+        "SeasonalGrowth": 0,
+        "ID": 0,
+        "LastUpdated": "2026-02-18T21:45:38.228Z",
+        "LastUpdatedByUser": "string"
+      }
+    ],
+    "ExternalFulFilmentProduct": {
+      "ExternalFulfiler": "string",
+      "Identifier": "string",
+      "AltIdentifier": "string",
+      "CartonLabelQuantity": 0,
+      "TotalQuantity": 0,
+      "QuantityLastUpdated": "2026-02-18T21:45:38.228Z",
+      "ExternalFulFilmentProductInventory": [
+        {
+          "ExternalFulfilerAccountId": 0,
+          "ExternalFulfiler": "string",
+          "TotalStock": 0,
+          "OnHandStock": 0,
+          "ExternalFulFilmentProduct": "string",
+          "ProductId": 0,
+          "Product": "string",
+          "LastUpdated": "2026-02-18T21:45:38.228Z",
+          "LastUpdatedByUser": "string"
+        }
+      ],
+      "ProductId": 0,
+      "Product": "string",
+      "LastUpdated": "2026-02-18T21:45:38.228Z",
+      "LastUpdatedByUser": "string"
+    },
+    "ExternalFulFilmentProductInventory": [
+      {
+        "ExternalFulfilerAccountId": 0,
+        "ExternalFulfiler": "string",
+        "TotalStock": 0,
+        "OnHandStock": 0,
+        "ExternalFulFilmentProduct": "string",
+        "ProductId": 0,
+        "Product": "string",
+        "LastUpdated": "2026-02-18T21:45:38.228Z",
+        "LastUpdatedByUser": "string"
+      }
+    ],
+    "OrderItems": [
+      {
+        "OrderId": 0,
+        "ProductId": 0,
+        "Quantity": 0,
+        "Allocated": 0,
+        "Commited": 0,
+        "OnBackOrder": 0,
+        "SourceLineSubTotal": 0,
+        "SourceLineTotalTax": 0,
+        "SourceLineTotalDiscount": 0,
+        "SourceLineTotal": 0,
+        "Price": 0,
+        "Vat": 0,
+        "Discount": 0,
+        "PriceNet": 0,
+        "Tax": 0,
+        "DiscountGross": 0,
+        "TaxRate": 0,
+        "DiscountNet": 0,
+        "DiscountTax": 0,
+        "NetPaid": 0,
+        "TaxPaid": 0,
+        "TotalTax": 0,
+        "Details": "string",
+        "SKU": "string",
+        "OrderItemNameValues": [
+          {
+            "Name": "string",
+            "Value": "string",
+            "Internal": true,
+            "ID": 0,
+            "LastUpdated": "2026-02-18T21:45:38.228Z",
+            "LastUpdatedByUser": "string"
+          }
+        ],
+        "ID": 0,
+        "LastUpdated": "2026-02-18T21:45:38.228Z",
+        "LastUpdatedByUser": "string"
+      }
+    ],
+    "Subscription": true,
+    "SubscriptionLength": 0,
+    "SubscriptionFrequency": "string",
+    "ProductInCategories": [
+      {
+        "ProductId": 0,
+        "ProductCategoryId": 0,
+        "ProductCategory": {
+          "Name": "string",
+          "ClientId": 0,
+          "ID": 0,
+          "LastUpdated": "2026-02-18T21:45:38.228Z",
+          "LastUpdatedByUser": "string"
+        },
+        "ID": 0,
+        "LastUpdated": "2026-02-18T21:45:38.228Z",
+        "LastUpdatedByUser": "string"
+      }
+    ],
+    "ProductPrices": [
+      {
+        "ProductId": 0,
+        "Price": 0,
+        "ProductPriceTypeId": 0,
+        "ProductPriceType": {
+          "Name": "string",
+          "ID": 0,
+          "LastUpdated": "2026-02-18T21:45:38.228Z",
+          "LastUpdatedByUser": "string"
+        },
+        "CurrencyId": 0,
+        "Currency": {
+          "Name": "string",
+          "Code": "str",
+          "Symbol": "string",
+          "ID": 0,
+          "LastUpdated": "2026-02-18T21:45:38.228Z",
+          "LastUpdatedByUser": "string"
+        },
+        "ID": 0,
+        "LastUpdated": "2026-02-18T21:45:38.228Z",
+        "LastUpdatedByUser": "string"
+      }
+    ],
+    "ProductSuppliers": [
+      {
+        "ProductId": 0,
+        "ProductSupplierId": 0,
+        "ProductSupplier": {
+          "Name": "string",
+          "ContactName": "string",
+          "ContactNumber": "string",
+          "AddressLine1": "string",
+          "AddressLine2": "string",
+          "AddressLine3": "string",
+          "Town": "string",
+          "County": "string",
+          "Postcode": "string",
+          "CountryId": 0,
+          "Country": {
+            "Name": "string",
+            "Code": "string",
+            "Code3": "string",
+            "ID": 0,
+            "LastUpdated": "2026-02-18T21:45:38.228Z",
+            "LastUpdatedByUser": "string"
+          },
+          "ContactEmail": "string",
+          "Active": true,
+          "Code": "string",
+          "CurrencyId": 0,
+          "Currency": {
+            "Name": "string",
+            "Code": "str",
+            "Symbol": "string",
+            "ID": 0,
+            "LastUpdated": "2026-02-18T21:45:38.228Z",
+            "LastUpdatedByUser": "string"
+          },
+          "ClientId": 0,
+          "ID": 0,
+          "LastUpdated": "2026-02-18T21:45:38.228Z",
+          "LastUpdatedByUser": "string"
+        },
+        "ID": 0,
+        "LastUpdated": "2026-02-18T21:45:38.228Z",
+        "LastUpdatedByUser": "string"
+      }
+    ],
+    "ClientId": 0,
+    "ID": 0,
+    "LastUpdated": "2026-02-18T21:45:38.228Z",
+    "LastUpdatedByUser": "string"
+  }
+]

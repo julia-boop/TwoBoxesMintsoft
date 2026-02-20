@@ -60,8 +60,19 @@ class MintsoftOrderClient:
         r.raise_for_status()
         return r.json()
     
-    def create_return(self, order_id:int, warehouse_id:int, client_id:int):
-        return []
+    def create_return(self, order_id:int, data):
+        url = f"{self.BASE_URL}/api/Return/CreateReturn?OrderId={order_id}"
+
+        r = requests.post(
+            url, 
+            headers=self.headers()
+        )
+
+        r.raise_for_status()
+        response = r.json()
+        return_id = response.get("ID")
+        print(response)
+        return return_id
 
     def create_external_return(self, data:Dict[str, Any]):
         url = f"{self.BASE_URL}/api/Return/CreateExternalReturn"
@@ -74,8 +85,9 @@ class MintsoftOrderClient:
 
         r.raise_for_status()
         response = r.json()
+        return_id = response.get("ID")
         print(response)
-        return response
+        return return_id
     
     def add_return_item(self, return_id: int, item_data: Dict[str, Any]) -> Dict[str, Any]:
         url = f"{self.BASE_URL}/api/Return/{return_id}/AddItem"
@@ -196,3 +208,21 @@ class MintsoftOrderClient:
         print(data)
         return data    
     
+    def get_product_id(self, sku:str):
+        url = f"{self.BASE_URL}//api/Product/Search?Search={sku}"
+
+        r = requests.get(
+            url,
+            headers=self.headers(),
+            timeout=30,
+        )
+
+        r.raise_for_status()
+        data = r.json()
+        product_id = data[0]["ID"] if data else None
+        print(data)
+        print(f"Product ID for SKU {sku}: {product_id}")
+        return data
+
+client = MintsoftOrderClient()
+client.get_product_id("TEST1")
