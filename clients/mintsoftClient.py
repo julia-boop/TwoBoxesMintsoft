@@ -208,9 +208,9 @@ class MintsoftOrderClient:
         print(data)
         return data    
     
-    def get_product_id(self, sku:str):
-        url = f"{self.BASE_URL}//api/Product/Search?Search={sku}"
-
+    def get_product_id(self, sku:str, client_id:int):
+        url = f"https://api.mintsoft.co.uk/api/Product/LookupProductId?SKU={sku}&clientId={client_id}"
+            
         r = requests.get(
             url,
             headers=self.headers(),
@@ -219,10 +219,9 @@ class MintsoftOrderClient:
 
         r.raise_for_status()
         data = r.json()
-        product_id = data[0]["ID"] if data else None
         print(data)
-        print(f"Product ID for SKU {sku}: {product_id}")
+        print(f"Product ID for SKU {sku}: {data}")
         return data
 
 client = MintsoftOrderClient()
-client.get_product_id("TEST1")
+client.get_product_id("1 METER IVORY DOUBLE CREPE - KAREEMAH", 20)
